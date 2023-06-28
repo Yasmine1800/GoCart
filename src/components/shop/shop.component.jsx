@@ -5,7 +5,7 @@ import CategoriesPreview from "../../routes/categories-preview/categories-previe
 
 import Category from "../../routes/category/category.component";
 
-import './shop.styles.scss'
+
 
 const Shop = () => {
    

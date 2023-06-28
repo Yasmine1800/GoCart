@@ -3,8 +3,12 @@ import FormInput from "../form-input/form-input.component";
 
 import { UserContext } from "../../contexts/user.context";
 
+import { Title, SignInFormContainer, ButtonsContainer } from "./sign-in-form.styles.jsx";
+
+
 import Button from "../button/button.component";
-import './sign-in-form.styles.scss';
+import { BUTTON_TYPE_CLASSES } from "../button/button.component";
+import './sign-in-form.styles.jsx';
 
 import { 
     signInWithGooglePopup,
@@ -65,8 +69,8 @@ const SignInForm = () => {
     }
 
     return(
-        <div className="sign-in-form-container">
-            <h2>Already have an account ?</h2>
+        <SignInFormContainer>
+            <Title>Already have an account ?</Title>
             <span>Sign In with your email and password</span>
            
             <form onSubmit={handleSubmit}>
@@ -87,15 +91,15 @@ const SignInForm = () => {
                 name='password'
                 value={password}/>
 
-                <div className="buttons-container">
+                <ButtonsContainer>
 
                     <Button buttonType='inverted' type='submit'>Sign In</Button>
-                    <Button type='button' buttonType='google' onClick={signInWithGoogle}>Google Sign In</Button>
+                    <Button  buttonType={BUTTON_TYPE_CLASSES.google} type='button' onClick={signInWithGoogle}>Google Sign In</Button>
 
-                </div>
+                </ButtonsContainer>
 
             </form>
-        </div>
+        </SignInFormContainer>
     )
 }
 
