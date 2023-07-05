@@ -17,7 +17,6 @@ const CartDropdown = () => {
     const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen)
 
    const goToCheckout = () => {
-        console.log('mok')
         navigate('/checkout');
    }
    
@@ -26,7 +25,6 @@ const CartDropdown = () => {
         toggleIsCartOpen();
    }
 
-   
 
     return(
         <CartDropdownContainer>
@@ -42,10 +40,12 @@ const CartDropdown = () => {
             </CartItemsContainer>
            
                 <Button onClick={handleButtonClick}>GO TO CHECKOUT</Button>
-           
+                
         </CartDropdownContainer>
     )
 
 }
 
 export default CartDropdown;
+
+

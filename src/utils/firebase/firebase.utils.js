@@ -1,21 +1,25 @@
-import { initializeApp} from 'firebase/app'
+import { initializeApp} from 'firebase/app';
+
 import { getAuth,signInWithPopup,
         GoogleAuthProvider,
         createUserWithEmailAndPassword,
         signInWithEmailAndPassword, signOut,
-        onAuthStateChanged  } from 'firebase/auth';
+        onAuthStateChanged
 
-import {getFirestore,
-        doc,
-        getDoc,
-        setDoc,
-        collection,
-        writeBatch,
-        query,
-        getDocs,
-        queryEqual,
+} from 'firebase/auth';
+
+import {
+      getFirestore,
+      doc,
+      getDoc,
+      setDoc,
+      collection,
+      writeBatch,
+      query,
+      getDocs,
+      queryEqual,
       
-      } from 'firebase/firestore'
+} from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyB9xdWHSTgeoj3EA0vTwXg6h2W-6F_rPw8",
@@ -51,7 +55,6 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd, fie
 
 
   await batch.commit();
-  console.log('done');
 }
 
 export const getCategoriesAndDocuments = async()=>  {
@@ -60,12 +63,16 @@ export const getCategoriesAndDocuments = async()=>  {
 
 
   const querySnapShot = await getDocs(q);
-  const categoryMap = querySnapShot.docs.reduce((acc, docSnapShot)=> {
-    const {title, items} = docSnapShot.data();
-    acc[title.toLowerCase()] = items;
-    return acc;
-  }, {});
-  return categoryMap;
+  return querySnapShot.docs.map((docSnapShot) => docSnapShot.data())
+  
+  
+  
+  // .reduce((acc, docSnapShot)=> {
+  //   const {title, items} = docSnapShot.data();
+  //   acc[title.toLowerCase()] = items;
+  //   return acc;
+  // }, {});
+  // return categoryMap;
 }
 
 export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {displayName:'yasmine'}) => {

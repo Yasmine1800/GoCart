@@ -2,6 +2,7 @@ import { useReducer } from 'react';
 import {createContext,  useState} from 'react';
 
 import {createAction}  from '../utils/reducer/reducer.utils';
+import { RemoveButton } from '../components/checkout-item/checkout-item.styles';
 
 const addCartItem = (cartItems , productToAdd) =>{
     //find if cartItems contain productToAdd
@@ -38,8 +39,6 @@ const removeCartItem = (cartItems, cartItemToRemove) =>{
             cartItem.id === cartItemToRemove.id ? {...cartItem, quantity: cartItem.quantity - 1}
             : cartItem
         );
-
-
 }
 
 const clearCartItem = (cartItems, cartItemToClear) => {
@@ -133,9 +132,6 @@ export const CartProvider = ({children}) => {
                     totalCount: newTotalCount
                 })
         );
-
-
-
     }
 
 
@@ -144,6 +140,7 @@ export const CartProvider = ({children}) => {
         updateCartItemReducer(newCartItems);
 
     }
+
 
     const removeItemFromCart = (productToAdd) => {
         const newCartItems = removeCartItem(cartItems, productToAdd);
