@@ -13,7 +13,7 @@ export const categoriesReducer = (state = CATEGORIES_INITIAL_STATE, action = {} 
             return {
                 ...state,
                 categoriesMap: payload
-            }
+            };
         default : return state;
     }
 }

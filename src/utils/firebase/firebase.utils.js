@@ -73,9 +73,9 @@ export const getCategoriesAndDocuments = async()=>  {
   //   return acc;
   // }, {});
   // return categoryMap;
-}
+};
 
-export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {displayName:'yasmine'}) => {
+export const createUserDocumentFromAuth = async (userAuth, additionalInformation = {}) => {
     /*first db, second collection, third identifier*/
     if(!userAuth) return;
     const userDocRef = doc(db, 'users', userAuth.uid );

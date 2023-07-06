@@ -4,6 +4,6 @@ import { categoriesReducer } from "./categories/category.reducer";
 
 export const rootReducer = combineReducers({
     user: userReducer,
-    categories: categoriesReducer
+    categories: categoriesReducer,
 
-})
+});
