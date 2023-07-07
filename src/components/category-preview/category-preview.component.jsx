@@ -1,4 +1,3 @@
-
 import ProductCard from '../product-card/product-card.component';
 import './category-preview.styles.jsx';
 import { CategoryPreviewContainer, PreviewGrid, TitleElement } from './category-preview.styles.jsx';
