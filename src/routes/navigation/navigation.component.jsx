@@ -16,10 +16,13 @@ import {signOutUser} from '../../utils/firebase/firebase.utils';
 
 import { NavigationContainer, LogoContainer, NavLink, NavLinks } from "./navigation.styles";
 
+import {selectIsCartOpen} from '../../store/cart/cart.selector';
+
 const Navigation = () => {
 
     const currentUser = useSelector(selectCurrentUser);
-    const {isCartOpen} = useContext(CartContext);
+    // const {isCartOpen} = useContext(CartContext);
+    const isCartOpen = useSelector(selectIsCartOpen)
     
 
 

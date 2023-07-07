@@ -2,7 +2,6 @@ import { useReducer } from 'react';
 import {createContext,  useState} from 'react';
 
 import {createAction}  from '../utils/reducer/reducer.utils';
-import { RemoveButton } from '../components/checkout-item/checkout-item.styles';
 
 const addCartItem = (cartItems , productToAdd) =>{
     //find if cartItems contain productToAdd

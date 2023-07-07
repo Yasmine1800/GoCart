@@ -12,7 +12,7 @@ export const categoriesReducer = (state = CATEGORIES_INITIAL_STATE, action = {} 
         case CATEGORIES_ACTION_TYPE.SET_CATEGORIES : 
             return {
                 ...state,
-                categoriesMap: payload
+                categories: payload
             };
         default : return state;
     }
