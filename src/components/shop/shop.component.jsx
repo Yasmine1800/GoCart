@@ -6,18 +6,19 @@ import CategoriesPreview from "../../routes/categories-preview/categories-previe
 
 import Category from "../../routes/category/category.component";
 import { getCategoriesAndDocuments } from "../../utils/firebase/firebase.utils";
+
 import { setCategories} from "../../store/categories/category.action";
 
 const Shop = () => {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    useEffect(()=> {
-        const getCategoriesMap = async () => {
-            const categoriesArray = await getCategoriesAndDocuments('categories');
-            dispatch(setCategories(categoriesArray));
-        };
-        getCategoriesMap();
-    }, []);
+    // useEffect(()=> {
+    //     const getCategoriesMap = async () => {
+    //         const categoriesArray = await getCategoriesAndDocuments('categories');
+    //         setCategories(categoriesArray);
+    //     };
+    //     getCategoriesMap();
+    // }, []);
    
     return(
         <Routes>

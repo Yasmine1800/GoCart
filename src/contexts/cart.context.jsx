@@ -63,7 +63,9 @@ export const CartContext = createContext({
 
 export const CART_ACTION_TYPES = {
     SET_CART_ITEMS :  'SET_CART_ITEMS',
-    SET_IS_CART_OPEN: 'SET_IS_CART_OPEN'
+    SET_IS_CART_OPEN: 'SET_IS_CART_OPEN',
+    SET_CART_COUNT: 'SET_CART_COUNT',
+     SET_CART_TOTAL: 'SET_CART_TOTAL',
 }
 
 const cartReducer = (state, action) => {
@@ -93,7 +95,7 @@ const INITIAL_STATE = {
 };
 
 export const CartProvider = ({children}) => {
-    // const [isCartOpen, setIsCartOpen] = useState(false);
+    //const [isCartOpen, setIsCartOpen] = useState(false);
     //const [cartItems, setCartItems] = useState([]);
     //const [cartCount, setCartCount] = useState(0);
     //const [totalCount, setTotalCount]= useState(0);
