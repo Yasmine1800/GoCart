@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { SpinnerContainer } from '../spinner/spinner.styles';
 
 export const BaseButton = styled.button`
 
@@ -44,7 +45,7 @@ export const InvertedButton = styled(BaseButton)`
   background-color: white;
   color: black;
   border: 1px solid black;
-  font
+  
   &:hover {
   background-color: black;
   color: white;
@@ -54,6 +55,19 @@ export const InvertedButton = styled(BaseButton)`
 
 `;
 
+export const ButtonSpinner = styled(SpinnerContainer)`
+  width: 30px;
+  height:30px;
+`
+export const SignButton = styled(BaseButton)`
+  transform: translateX(60px);
+  background-color: #726562;
+
+  &:hover{
+      border-color: #726562;
+      color:#726562;
+  }
+`
 
 
 

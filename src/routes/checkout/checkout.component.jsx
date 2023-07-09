@@ -5,6 +5,10 @@ import './checkout.styles.jsx';
 import { CheckoutContainer, CheckoutHeader, HeaderBlock, Total } from './checkout.styles.jsx';
 
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
+
+import PaymentForm from '../../components/payment-form/payment-form.component';
+
+
 const Checkout = () => {
   const { cartItems, totalCount} = useContext(CartContext);
 
@@ -37,6 +41,7 @@ const Checkout = () => {
       )}
       
       <Total as='span' >Total : $ {totalCount}</Total>
+      <PaymentForm/>
       
     </CheckoutContainer>
   
