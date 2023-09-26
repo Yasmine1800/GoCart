@@ -36,8 +36,7 @@ export const CategoriesProvider = ({children}) => {
                 payload:categoryMap
             })
         };
-        
-        return () => getCategoriesMap();
+        getCategoriesMap()
     }, []);
 
 
