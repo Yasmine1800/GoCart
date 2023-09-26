@@ -164,12 +164,16 @@ export const CartProvider = ({ children }) => {
             }
         )
     }
-
+    const clearCartItems = () => {
+        updateCartItemReducer([])
+    }
+    
     const value = {
         isCartOpen,
         cartItems,
         cartCount,
         totalCount,
+        clearCartItems,
         setIsCartOpen,
         addItemToCart,
         removeItemFromCart,
