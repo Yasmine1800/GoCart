@@ -13,10 +13,8 @@ import { CategoryContainer , CategoryTitle} from './category.styles.jsx';
 
 const Category = () => {
     const {category} = useParams();
-    console.log(category)
 
     const {categoriesMap} = useContext(CategoriesContext);
-    console.log(categoriesMap)
     const [products, setProducts] = useState(categoriesMap[category]);
 
     useEffect(()=> {
