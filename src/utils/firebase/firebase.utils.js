@@ -59,10 +59,16 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd, fie
 
 export const getCategoriesAndDocuments = async ()=>  {
   const collectionRef = collection(db, 'categories');
+
+  console.log(collectionRef)
   const q = query(collectionRef);
+  console.log(q)
+
+
 
 
   const querySnapShot = await getDocs(q);
+  console.log(querySnapShot)
   return querySnapShot.docs
     .reduce((acc, docSnapShot)=> {
         const {title, items} = docSnapShot.data();
