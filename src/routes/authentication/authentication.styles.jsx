@@ -11,3 +11,12 @@ margin: 30px auto;
 
 `;
 
+export const IllustrationImage = styled.img`
+    width: 300px; 
+    height: 450px; 
+`;
+
+export const IllustrationImage2 = styled.img`
+    width: 400px; 
+    height: 450px; 
+`;

@@ -3,10 +3,11 @@ import { Outlet, Link, useNavigate } from "react-router-dom";
 
 
 import { ReactComponent as CrownLogo} from '../../assets/crown.svg' ;
-
+import { BlackButton, RedButton, ShoppingBagIcon } from "./navigation.styles";
 
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+
 
 
 
@@ -39,7 +40,9 @@ const Navigation = () => {
         <Fragment>
             <NavigationContainer>
                 <LogoContainer to='/'>
-                    <CrownLogo className="logo"/>
+                   
+                <ShoppingBagIcon className="logo" />
+
                 </LogoContainer>
                 <NavLinks>
                     <NavLink to='/shop'>
@@ -47,10 +50,16 @@ const Navigation = () => {
                     </NavLink>
                     {
                         currentUser ? (
-                            <NavLink as='span' onClick={signOutHandler}>SIGN OUT</NavLink>
+                            <NavLink as='span' onClick={signOutHandler}>
+                                <BlackButton>
+                                 SIGN OUT    
+                                </BlackButton>
+                            </NavLink>
                         ) : 
                                 (<NavLink className="nav-link" to='/auth'>
+                                    <RedButton>
                                     Sign In
+                                    </RedButton>
                                 </NavLink>)
                     }
                     <CartIcon/>
