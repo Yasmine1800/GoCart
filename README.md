@@ -8,3 +8,8 @@ GoCart is an application that enables customers to shop online conveniently and 
 ![image](https://github.com/Yasmine1800/GoCart/assets/107960867/af7c63d4-63ac-4bf6-a9aa-1534ec9fec84)
 # Go Live
 https://boisterous-moxie-616d96.netlify.app
+
+To run the app in development mode, use the following command: npm start
+Ensure your `.env` file contains the following variables:
+- `REACT_APP_STRIPE_PUBLISHABLE_KEY`
+- `STRIPE_SECRET_KEY`
